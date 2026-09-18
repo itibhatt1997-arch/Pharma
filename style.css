@@ -200,39 +200,19 @@ p { margin: 0 0 1rem; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-family: var(--display);
-  font-weight: 800;
-  color: var(--navy);
-  white-space: nowrap;
-}
-
-.site-header .logo {
-  font-size: 1.18rem;
-  letter-spacing: -0.03em;
-}
-
-.logo-text span {
-  font-weight: 600;
-  margin-left: 0.32em;
-}
-
-.logo-footer { color: var(--navy); }
-.logo-footer .logo-mark { color: var(--teal); }
-
-.logo-mark {
-  color: var(--teal);
-  width: 32px;
-  height: 32px;
   flex-shrink: 0;
-  display: grid;
-  place-items: center;
 }
 
-.site-header .logo-mark,
-.site-header .logo-mark svg {
-  width: 40px;
-  height: 40px;
+.site-header .logo img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
+.logo-footer img {
+  height: 88px;
+  width: auto;
+  display: block;
 }
 
 .nav-toggle {
@@ -1491,8 +1471,13 @@ section[id] { scroll-margin-top: calc(var(--chrome-h) + 12px); }
 .footer-location,
 .contact-list a {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
+}
+
+.footer-location {
+  max-width: 22rem;
+  line-height: 1.5;
 }
 
 .footer-location svg,
@@ -1615,6 +1600,7 @@ section[id] { scroll-margin-top: calc(var(--chrome-h) + 12px); }
 }
 
 @media (max-width: 768px) {
+  .site-header .logo img { height: 52px; }
   .nav-toggle { display: block; z-index: 60; }
   .nav-panel {
     position: fixed;
